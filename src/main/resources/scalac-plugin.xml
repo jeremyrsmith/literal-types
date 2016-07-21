@@ -1,0 +1,4 @@
+<plugin>
+  <name>literal-types</name>
+  <classname>literaltypes.LiteralTypes</classname>
+</plugin>
