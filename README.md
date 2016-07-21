@@ -51,8 +51,9 @@ legal scala identifiers, they must be encased in backticks, like:
 type Foo = `"foo"`
 ```
 
-In this case, `` `"foo"` `` is replaced with the constant type `String("foo")`.  Of course, this means that you won't
-be able to use that literal name as an identifier for a type.  But you wouldn't do that anyway, would you?
+In this case, `` `"foo"` `` is replaced with the constant type `String("foo")`.  The backticks are necessary to allow
+the program to parse. Of course, this means that you won't be able to use that literal name as an identifier for a type.
+But you wouldn't do that anyway, would you?
 
 The literal types that can be expressed this way are:
 
@@ -68,4 +69,5 @@ The plugin will operate on any such identifier *in a type position*. That is, yo
 variables (which again, you shouldn't be doing) but not as names of types.
 
 Again, I'm not sure how useful this idea is, because (as mentioned just above) you can already specify these types using
-the slightly more arduous `` Witness.`[literal]`.T `` syntax of shapeless.
+the slightly more arduous `` Witness.`[literal]`.T `` syntax of shapeless.  The advantage of this plugin might be that
+(apart from symbol literals) there isn't a dependency on shapeless.
